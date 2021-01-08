@@ -1,7 +1,6 @@
-import time
+from time import localtime, sleep, strftime
 
 while(True):
-    date_and_time = time.ctime()
-    time_only = date_and_time[11:20]
-    print(time_only, end='\r')
-    time.sleep(1)
+    time_am_pm = strftime("%I:%M:%S %p", localtime())
+    print(time_am_pm, end='\r')
+    sleep(1)
